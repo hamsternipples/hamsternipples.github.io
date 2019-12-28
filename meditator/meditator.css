@@ -1,0 +1,146 @@
+* {
+  /* everything gets border-box sizing, to make calculations easy (and more game-like) */
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  letter-spacing: 1px;
+  color: #3e4049;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-align: center;
+}
+button:focus {
+  outline: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+ul > .element {
+  padding: 4px 0;
+}
+li.sound {
+  display: block;
+  cursor: pointer;
+  border: solid 1px #b32b2b;
+  border-radius: 3px;
+  background-color: #ff003b;
+  background-image: linear-gradient(to bottom, #e2243e, #f53458);
+  margin: 2px;
+  padding: 2px 6px;
+}
+li.sound.playing {
+  background: #f50;
+}
+li.sound.queued {
+  background: #f0e;
+}
+li.sound > .title {
+  position: relative;
+  margin-left: 4px;
+}
+.progress-bar {
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  position: absolute;
+}
+.progress-bar > div {
+  background: #f00;
+  border: solid 1px #e64e4e;
+  border-right: solid 2px #bb2a2a;
+  border-radius: 4px;
+  height: 20px;
+  width: 45%;
+  position: relative;
+}
+.element {
+  border: solid 1px #c72e2e;
+  border-radius: 4px;
+  margin: 4px 8px;
+  padding: 4px;
+  background: #f31313;
+  color: #fff;
+  -webkit-text-stroke: 1px #c2c1ff;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  box-shadow: 3px 3px 2px -1.5px rgba(0, 0, 0, 0.75);
+}
+.element > h4 {
+  padding-bottom: 2px;
+}
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  padding: 0 0 10px 0;
+  border-top: solid 1px #000;
+}
+.bottom-bar > .whats-playing {
+  position: absolute;
+  left: 120px;
+  width: 70%;
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+  border-left: solid 1px #d4d4d4;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  color: #ddd;
+}
+.bottom-bar > .play-button {
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: solid 1px #5d5dbf;
+  background-color: #2700ff;
+  background-image: linear-gradient(to bottom, #2444e2, #346ff5);
+}
+.bottom-bar > .play-button:hover {
+  border: 1px solid #44adc6;
+  background-color: #6bbed2;
+  background-image: linear-gradient(to bottom, #6bbed2, #50abc4);
+}
+.bottom-bar > .play-button > span {
+  -webkit-text-stroke: 1px #c2c1ff;
+  transform: translate(4px, 0);
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+/*# sourceMappingURL=meditator.css.map */
